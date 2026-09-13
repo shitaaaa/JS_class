@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>希達小天地</title>
+    <link rel="icon" type="image/png" image  src="image\apple.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Noto Sans Traditional Chinese", sans-serif;
+            background-color: #f0ede8;
+            padding: 48px 50px 80px;
+        }
+
+        .header-wrapper {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <h1 style="color: #574000;">希達小天地(❁´◡`❁)</h1>
+    </div>
+    <script>
+const wantoo = '旺兔生氣版';
+switch(wantoo) {
+    case '旺兔生氣版':
+        console.log('你選擇了旺兔生氣版');
+        break;
+    case '旺兔開心版':
+        console.log('你選擇了旺兔開心版');
+        break;
+    case '旺兔難過版':
+        console.log('你選擇了旺兔難過版');
+        break; 
+    case '旺兔驚訝版':
+        console.log('你選擇了旺兔驚訝版');
+        break;
+    case '旺兔害羞版':
+        console.log('你選擇了旺兔害羞版');
+        break;
+
+        }
+    </script>
+
+</body>
+
+</html>
