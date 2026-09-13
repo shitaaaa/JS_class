@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script> //課堂小測試
+    let ponint = 0; 
+
+    if (ponint <60) {
+        console.log('F');
+    } else if (ponint <70) {
+        console.log('D');
+    } else if (ponint <80) {
+        console.log('C');
+    } else if (ponint <90) {
+        console.log('B');
+    } else {
+        console.log('A');
+    } 
+    </script>
+</body>
+</html>
