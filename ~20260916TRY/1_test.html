@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>小節練習</h1>
+    <script>
+        /* //test one
+         let score = 100;
+         if (score > 89) {
+             console.log(`分數${score}的等級是：\A`);
+         } else if (score > 79) {
+             console.log(`分數${score}的等級是：\B`);
+         } else if (score > 69) {
+             console.log(`分數${score}的等級是：\C`);
+         } else if (score > 59) {
+             console.log(`分數${score}的等級是：\D`);
+         } else {
+             console.log(`分數${score}的等級是：\F`);
+         }
+ 
+         / 練習 1：成績等級判斷
+         let score = 95;
+         let grade;
+ 
+         if (score >= 90) {
+             grade = "A";
+         } else if (score >= 80) {
+             grade = "B";
+         } else if (score >= 70) {
+             grade = "C";
+         } else if (score >= 60) {
+             grade = "D";
+         } else {
+             grade = "F";
+         }
+ 
+         console.log(`分數 ${score} 的等級是：${grade}`); // 分數 95 的等級是：A
+     */
+        /*
+            //teat two
+            let leapyear = 2027;
+            let anser;
+            if((leapyear%4===0 && leapyear%100!==0) || leapyear%400===0){
+                anser ="是"
+            }else{
+               anser ="不是"
+            }
+            console.log(`${leapyear}年${anser}閏年`);
+          */
+
+        //test tree
+        let height = 156;
+        let weight = 47;
+        let bmi = weight / (height/100) **2;
+        let anser;
+        if (bmi < 18.5) {
+            anser = "過輕";
+        } else if (bmi < 25) {
+            anser = "正常";
+        }
+        else if (bmi < 30) {
+            anser = "過重";
+        } else {
+            anser = "肥胖";
+        }
+        console.log(`身高${height}公分，體重${weight}公斤，BMI${bmi.toFixed(2)}，體重狀態：${anser}`);
+
+        //網頁cosole不能計算bmi
+
+    </script>
+</body>
+
+</html>
