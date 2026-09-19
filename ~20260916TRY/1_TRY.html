@@ -11,7 +11,7 @@
     <h1>希達小天地</h1>
     <script>
         //變數的使用
-        /*
+        /* 
         let variety = "狗";
         let age = 9;
         let name = "陳浩南";
@@ -60,6 +60,71 @@
         console.log(typeof name);
         console.log(typeof islogin);
         */
+
+        /*
+        //字串的複合賦值
+        function dog(){
+            let variety = "狗";
+            let age = 9;
+            variety += "嗎？";
+            console.log(variety);
+        }
+        dog();
+
+        //邏輯運算子
+        function logicOperators(){
+            let ao = true
+            let bo = false
+            let boo = true
+
+            console.log(ao && bo);//f 兩個都必須為ture 才會回傳 true
+            console.log(bo && boo);//f
+
+            console.log(ao || bo);//t 其中一個為ture 就會回傳 true
+            console.log(bo || boo);//t
+
+            console.log(!ao);//f 反轉
+            console.log(!bo);//t
+
+            console.log(ao && bo || boo);//t
+            console.log(ao || bo && (boo||!ao));//t
+
+            //&&:找第一個 false（假值）；如果大家都是 true，就回傳最後一個值。
+            //||:找第一個 true（真值）；如果大家都是 false，就回傳最後一個值。
+
+        } 
+        logicOperators();
+
+        😗
+        function apple(){
+            let ao = '';
+            let bo = ao || 'apple';
+
+            console.log(bo);//f 
+
+
+        } 
+        apple();
+        */
+
+        //三元運算子
+        function checkDog(age) {
+            let message1;
+            if (age >= 18) {
+                dog1 = '老大哥哥狗';
+            } else {
+                dog1 = '小大哥狗';
+            }
+
+            let dog2 = age >= 15 ? '二代老大哥哥狗' : '二代小大哥狗';
+
+            console.log(dog1);
+            console.log(dog2);
+        }
+
+        checkDog(age); 
+
+
     </script>
 </body>
 
