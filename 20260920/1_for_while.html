@@ -12,24 +12,20 @@
     <script>
         //太太太太太
         let i = 0;
-        let very="";
+        let very = "";
         while (i < 5) {
-            very+="太"
+            very += "太"
             i++;
         }
         console.log(very);
-        
+
 
 
         //跟著做：迴圈練習
         //1.使用 for 迴圈印出 1 到 100 的奇數
 
-        let j = 1;
-        while (j < 101) {
+        for (let j = 1; j < 101; j += 2)
             console.log(j)
-            j += 2
-        }
-        
 
         //2.使用 while 迴圈計算 1 到 100 的總和
         let k = 1;
@@ -43,19 +39,17 @@
 
         //3.使用巢狀迴圈印出一個 5×5 的星號方陣
         let l = 1;
-
+        let start = "";
         while (l < 6) {
-            let start="";
-            let m = 0;
+            let m = 1;
             while (m < 6) {
                 start += "*";
                 m++;
             }
-
-            console.log(start);
+            start += `\n`
             l++;
         }
-
+        console.log(start);
 
 
 
