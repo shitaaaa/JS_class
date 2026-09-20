@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>函式</p>
+    <script>
+        //不傳遞參數
+        //宣告函示，命名為BMI
+        function BMI01() {
+            let height = 156;
+            let weight = 47;
+            let bmi = weight / (height / 100) ** 2;
+            let anser;
+            if (bmi < 18.5) {
+                anser = "過輕";
+            } else if (bmi < 25) {
+                anser = "正常";
+            }
+            else if (bmi < 30) {
+                anser = "過重";
+            } else {
+                anser = "肥胖";
+            }
+            console.log(`身高${height}公分，體重${weight}公斤，BMI${bmi.toFixed(2)}，體重狀態：${anser}`);
+        }
+
+        //呼叫函式
+        BMI01();
+
+        //傳遞參數
+        //宣告函示，命名為BMI
+        function BMI02(height, weight) {
+            if (height === undefined || weight === undefined) {
+                console.log('請輸入身高體重')
+            }
+            else {
+                let bmi = weight / (height / 100) ** 2;
+                let anser;
+                if (bmi < 18.5) {
+                    anser = "過輕";
+                } else if (bmi < 25) {
+                    anser = "正常";
+                }
+                else if (bmi < 30) {
+                    anser = "過重";
+                } else {
+                    anser = "肥胖";
+                }
+                console.log(`身高${height}公分，體重${weight}公斤，BMI${bmi.toFixed(2)}，體重狀態：${anser}`);
+            }
+        }
+        //呼叫函式
+        BMI02(155, 60);
+
+
+        //函式支援參數傳遞
+        //宣告函示，命名為BMI
+        function BMI03(height, weight) {
+            if (height === undefined || weight === undefined) {
+                return '請輸入身高體重'
+            }
+            else {
+                let bmi = weight / (height / 100) ** 2;
+                let anser;
+                if (bmi < 18.5) {
+                    anser = "過輕";
+                } else if (bmi < 25) {
+                    anser = "正常";
+                }
+                else if (bmi < 30) {
+                    anser = "過重";
+                } else {
+                    anser = "肥胖";
+                }
+                return `身高${height}公分，體重${weight}公斤，BMI${bmi.toFixed(2)}，體重狀態：${anser}`;
+            }
+        }
+        //呼叫函式
+        console.log(BMI03(155,60));
+
+    </script>
+</body>
+
+</html>
