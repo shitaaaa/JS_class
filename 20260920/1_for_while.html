@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>迴圈</p>
+    <script>
+        //太太太太太
+        let i = 0;
+        let very="";
+        while (i < 5) {
+            very+="太"
+            i++;
+        }
+        console.log(very);
+        
+
+
+        //跟著做：迴圈練習
+        //1.使用 for 迴圈印出 1 到 100 的奇數
+
+        let j = 1;
+        while (j < 101) {
+            console.log(j)
+            j += 2
+        }
+        
+
+        //2.使用 while 迴圈計算 1 到 100 的總和
+        let k = 1;
+        let sum = 0;
+        while (k < 101) {
+            sum += k;
+            k++;
+        }
+        console.log(sum)
+
+
+        //3.使用巢狀迴圈印出一個 5×5 的星號方陣
+        let l = 1;
+
+        while (l < 6) {
+            let start="";
+            let m = 0;
+            while (m < 6) {
+                start += "*";
+                m++;
+            }
+
+            console.log(start);
+            l++;
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
