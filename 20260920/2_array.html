@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>陣列</p>
+    <script>
+let dog=['約克夏','法鬥','雪納瑞','柴犬'];
+console.log(dog);
+
+// 使用 for 迴圈遍歷陣列
+for (let i = 0; i <dog.length; i++) {
+    console.log(`狗勾 ${i + 1}號：${dog[i]}`);
+}
+
+// 使用 for...of 迴圈（更簡潔）(比較常用)
+for(let anser of dog){
+    console.log(`狗勾${anser}`)
+}
+
+// 使用 forEach 方法（需要函式概念）
+dog.forEach((dogs, index) => {
+    console.log(`狗勾 ${index + 1}：${dogs}`);
+});
+
+
+
+// 在尾端新增元素
+dog.push('高山犬')
+dog.push('英鬥')
+console.log(dog);
+
+// 在開頭新增元素
+dog.unshift('拉不拉多')
+console.log(dog);
+
+// 移除尾端元素
+let lastdog = dog.pop()
+console.log(lastdog)
+console.log(dog)
+
+// 移除開頭元素
+let fistdog=dog.shift()
+console.log(fistdog)
+console.log(dog)
+
+// 檢查是否包含某個元素
+console.log(dog.includes('約克夏'))
+console.log(dog.includes('人類'))
+
+// 尋找元素的索引
+console.log(dog.indexOf('法鬥'))
+console.log(dog.indexOf('人類'))
+
+//將將陣列轉換為字串
+console.log(dog.join(','))
+
+
+    </script>
+</body>
+</html>

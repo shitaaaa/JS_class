@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>object</p>
+    <script>
+//建立空物件
+let emptyobject={};
+
+//建立有屬性的物件
+let dog={
+    name:'陳浩南',
+    age:9,
+    city:'新北市',
+    indog:true,
+    bd:'2017/04/17',
+    variety:'法鬥',
+}
+console.log(dog);
+
+// 使用點記法存取
+console.log(dog.bd);
+
+// 使用方括號記法存取
+console.log(dog['name']);
+
+// 讀取不存在的屬性會返回 undefined
+console.log(dog.price);   
+console.log(dog["price"]);
+
+// 傳統方式：檢查屬性是否存在
+if (dog.email) {
+    console.log("電子郵件：" + dog.email);
+} else {
+    console.log("狗勾沒有電子郵件");
+}
+
+// ES6 可選鏈運算子（?.）- 避免錯誤
+console.log(dog.email?.toUpperCase()); 
+
+
+// 使用 for...in 迴圈遍歷物件屬性
+for(let key in  dog){
+    console.log(`${key}:${dog[key]}`)
+}
+
+// 檢查屬性是否存在
+if('name' in dog){
+    console.log(`狗勾叫${dog.name}`)
+}
+
+
+
+    </script>
+</body>
+</html>
