@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin: 0 auto;
+
+            button {
+                padding: 8px 16px;
+                border: 1px solid #ccc;
+                background: #f5f5f5;
+            }
+
+            input {
+                width: 40px;
+                height: 40px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+
+        #preview-block {
+            background-color: red;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+
+            &.square {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+            &.circle {
+                clip-path: circle(50% at 50% 50%);
+            }
+
+            &.triangle {
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            }
+
+            &.star {
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <form class="form-container">
+        <button type="button" value="square">正方形</button>
+        <button type="button" value="circle">圓形</button>
+        <button type="button" value="triangle">三角形</button>
+        <button type="button" value="star">星星</button>
+        <input type="color" value="#ff0000" />
+    </form>
+    <hr />
+    <div id="preview-block" class="square"></div>
+
+
+    <!---參考 HTML 與 CSS 為 div 元素設計四種形狀（正方形、圓形、三角形、星形），
+並以 class 切換方式實現。-->
+
+
+    <script>
+        const buttons = document.querySelectorAll('.form-container button');
+        const colorInput = document.querySelector('.form-container input[type="color"]');
+        const previewBlock = document.getElementById('preview-block');
+
+
+        //按按鈕之後換相應形狀
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const shape = button.value;
+                previewBlock.className = shape;
+            });
+        });
+        //換顏色
+        colorInput.addEventListener('input', () => {
+            previewBlock.style.backgroundColor = colorInput.value;
+        });
+
+    </script>
+
+
+</body>
+
+</html>
