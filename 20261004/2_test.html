@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*
+請寫一個 JavaScript 函式
+產生 1~49 之間隨機且不重複的 6 個號碼
+並將結果由小到大排序，回傳一個陣列。
+
+輸出範例：[3, 8, 15, 22, 34, 45]
+提示：可用 Math.random()、Set、Array、sort() 等方法
+*/
+
+
+function Anser(){
+    const numberSet = new Set();
+    while (numberSet.size < 6) {
+        let NN = Math.floor(Math.random() * 49) + 1;
+        numberSet.add(NN);
+    }
+    return Array.from(numberSet).sort((a, b) => a - b);
+
+   console.log(Anser());
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let today = new Date();
+        console.log(today);
+
+        let birthday = new Date(1997, 10,04, 12,00,00);
+        console.log(`我的生日是：${birthday}`);
+
+        let isoDate = new Date("2024-08-01T12:00:00");
+        console.log("由字串建立日期：", isoDate);
+
+        console.clear();
+
+
+        let birthday2 = new Date(1997, 10,04);
+        console.log(`我的生日是:${birthday2}`);
+        console.log(`我的生日是：${birthday2.getFullYear()}年${birthday2.getMonth() + 1}月${birthday2.getDate()}日，請祝我生日快樂`);
+
+        console.clear();
+
+
+        let hbdm = new Date(1997, 10,04);
+        let hbdc = new Date(1995,08, 15);
+        let diff = (hbdm - hbdc) / 1000 / 60 / 60 / 24;
+        console.log(`${diff}天`);
+        console.log(hbdm.toLocaleDateString());
+
+        console.clear();
+
+
+
+        /*
+        請寫一個 JavaScript 程式
+        計算並將結果用 console.log 輸出
+        距離今年跨年還有 ${day} 天 ${hr} 小時 ${min} 分 ${sec} 秒。
+        
+        提示：可用 Date 物件、時間相減、毫秒轉換等技巧
+        */
+        function countDays() {
+            let now = new Date();
+            const lastDay = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
+
+
+            let diff = lastDay - now;
+            let diffDay = Math.floor(diff / 1000 / 60 / 60 / 24);
+            let diffHour = Math.floor(diff / 1000 / 60 / 60) % 24;
+            let diffMin = Math.floor(diff / 1000 / 60) % 60;
+            let diffSec = Math.floor(diff / 1000) % 60;
+
+            return `距離今年跨年還有 ${diffDay} 天 ${diffHour} 小時 ${diffMin} 分 ${diffSec} 秒。`;
+        }
+
+        console.log(countDays());
+        console.clear();
+
+
+
+
+    </script>
+</body>
+
+</html>
