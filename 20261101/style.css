@@ -15,7 +15,7 @@ body {
       gap: 10px;
 
       img {
-        border: 5px solid #6bd1eb;
+        border: 5px solid hsl(24, 100%, 71%);
         cursor: pointer;
         width: 100px;
         height: 100px;
@@ -25,7 +25,7 @@ body {
         touch-action: manipulation;
 
         &[src*='state'] {
-          background: yellow;
+          background: #ffec7f;
         }
 
         &[src*='on'] {
@@ -49,6 +49,18 @@ body {
       border-top: 1px solid #000;
       border-bottom: 1px solid #000;
     }
+
+    
+
+  /* 全站字體設定 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+
+
+/* 按鈕使用相同字體 */
+button {
+  font-family: inherit;
+}
   }
 
 
