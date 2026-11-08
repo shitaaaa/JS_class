@@ -859,6 +859,33 @@
       </div>
     </article>
   </section>
+  <!-- 訂位確認：僅示範資料，未連接正式後端 -->
+  <section id="bookingPanel" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="bookingPanelTitle">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="bookingPanelTitle">訂位確認（示範）</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="關閉"></button>
+    </div>
+    <form id="orderForm" class="offcanvas-body needs-validation" novalidate>
+      <div class="card mb-3">
+        <div class="card-body"><p id="bookingDates" class="mb-0"></p></div>
+        <ol class="list-group list-group-flush list-group-numbered"></ol>
+        <h5 class="card-header"></h5>
+        <div class="card-body">
+          <div class="mb-3"><label for="lokiUser" class="form-label">訪客姓名</label>
+            <input type="text" class="form-control" id="lokiUser" name="userName" required>
+            <div class="invalid-feedback">請輸入姓名</div></div>
+          <div class="mb-3"><label for="lokiPhone" class="form-label">聯絡手機</label>
+            <input type="tel" class="form-control" id="lokiPhone" name="userPhone" pattern="09[0-9]{8}" placeholder="09xxxxxxxx" required>
+            <div class="invalid-feedback">請輸入有效的台灣手機號碼（10 碼）</div></div>
+          <div class="mb-3"><label for="lokiMail" class="form-label">Email 電子信箱</label>
+            <input type="email" class="form-control" id="lokiMail" name="userMail" required>
+            <div class="invalid-feedback">請輸入有效的 Email</div></div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark w-100">產生示範訂單</button>
+      <small class="text-muted">練習版不會傳送個資，也不會建立正式訂位或收費。</small>
+    </form>
+  </section>
   <footer class="text-bg-dark">
     <div class="bg-light bg-opacity-25 overflow-hidden position-relative">
       <img
@@ -915,7 +942,8 @@
     </div>
   </footer>
   <script src="plugins/custom.js"></script>
-  <script src="plugins/lokiCalendar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="plugins/calendar.js"></script>
   <section
     class="offcanvas offcanvas-start"
     data-bs-backdrop="static"
